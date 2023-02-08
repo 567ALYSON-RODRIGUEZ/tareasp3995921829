@@ -193,27 +193,27 @@ public class Totito {
     /**
      * Pedimos un numero y lo devolvemos
           */
-    public static int pedirInteger(String mensaje) {
+    public static int pedirInteger(String smensaje) {
  
-        System.out.println(mensaje);
-        int numero = teclado.nextInt();
+        System.out.println(smensaje);
+        int inumero = teclado.nextInt();
  
-        return numero;
+        return inumero;
  
     }
  
     /**
      * Rellena la matriz con un simbolo
           */
-    public static void rellenarMatriz(char[][] matriz, char simbolo) 
+    public static void rellenarMatriz(char[][] cmatriz, char csimbolo) 
     {
-         for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz.length; j++) { matriz[i][j] = simbolo; } 
+         for (int i = 0; i < cmatriz.length; i++) {
+            for (int j = 0; j < cmatriz.length; j++) { cmatriz[i][j] = csimbolo; } 
          } 
     } /** * Validamos la posicion que nos insertan * * @param tablero * @param fila * @param columna * @return */ 
-    public static boolean validarPosicion(char[][] tablero, int fila, int columna) 
+    public static boolean validarPosicion(char[][] ctableroJuego, int ifila, int icolumna) 
     { 
-        if (fila >= 0 && fila < tablero.length && columna >= 0 && columna < tablero.length) {
+        if (ifila >= 0 && ifila < ctableroJuego.length && icolumna >= 0 && icolumna < ctableroJuego.length) {
             return true;
         }
         return false;
@@ -222,8 +222,8 @@ public class Totito {
     /**
      * Indicamos si en una posicion hay una marca
      */
-    public static boolean hayValorPosicion(char[][] matriz, int fila, int columna, char simboloDef) {
-        if (matriz[fila][columna] != simboloDef) {
+    public static boolean hayValorPosicion(char[][] cmatriz, int ifila, int icolumna, char csimboloDef) {
+        if (cmatriz[ifila][icolumna] != csimboloDef) {
             return true;
         }
          return false;
@@ -233,17 +233,18 @@ public class Totito {
      * Muestra la matriz
      *
           */
-    public static void mostrarMatriz(char[][] matriz) {
+    public static void mostrarMatriz(char[][] cmatriz) {
  
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[0].length; j++) {
-                System.out.print(matriz[i][j] + " ");
+        for (int i = 0; i < cmatriz.length; i++) {
+            for (int j = 0; j < cmatriz[0].length; j++) {
+                System.out.print(cmatriz[i][j] + " ");
             }
             System.out.println("");
         }
  
     }
     //Finaliza cambios segunda parte Alyson Rodríguez 9959-21-829
+    
     /**
      * Indica si la matriz esta llena cuando el simbolo por defecto aparezca, no
      * esta llena
