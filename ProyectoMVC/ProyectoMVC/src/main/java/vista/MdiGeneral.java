@@ -20,7 +20,7 @@ public class MdiGeneral extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         this.setExtendedState(MdiGeneral.MAXIMIZED_BOTH);
-        this.setTitle("Ejemplo Capas");
+        this.setTitle("Alyson Rodríguez 9959-21-829");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
